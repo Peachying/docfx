@@ -187,7 +187,7 @@ gulp.task("publish:gh-asset", () => {
 
     let githubToken = process.env.TOKEN;
     let assetZipPath = path.resolve(config.docfx["assetZipPath"]);
-    return Github.updateGithubReleaseAsync(config.docfx.sshRepoUrl, assetZipPath, githubToken);
+    return Github.updateGithubAssetAsync(config.docfx.sshRepoUrl, assetZipPath, githubToken);
 });
 
 gulp.task("publish:chocolatey", () => {
